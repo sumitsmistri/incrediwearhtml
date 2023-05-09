@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Slideshow Website</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="slideshow-container">
+		<div class="slide" id="slide1">
+			<img src="images/bg_1.jpg">
+			<div class="slide-content">
+				<h1 style="color: orange;">INCREDIWEAR</h1>
+				<button class="start-button">Get Started</button>
+			</div>
+		</div>
+		<div class="slide" id="slide2">
+			<img src="images/bg_2.jpg">
+			<div class="slide-container">
+				<div class="form-text">
+					<h2>Let's Get Started</h2>
+					<input type="text" name="person-name" placeholder="Your Name">
+					<input type="email" name="person-email" placeholder="Your Email"></br>
+					<button class="next-button save-name">Next &#8250;</button>
+				</div>
+			</div>
+		</div>
+		<div class="slide" id="slide3" data-nextslide="5000">
+			<img src="images/bg_3.jpg">
+			<div class="slide-container">
+				<div class="form-text">
+					<h2>Thanks <span class="person_name_session">John</span></h2>
+				</div>
+			</div>
+		</div>
+		<div class="slide" id="slide4" data-nextslide="29000">
+			<img src="images/bg_4.jpg">
+		</div>
+		<div class="slide" id="slide5">
+			<img src="images/bg_5.jpg">
+			<div class="slide-content">
+				<div class="video-wrapper">
+					<img src="images/thumb.jpg" width="320" id="jc_thumb">
+					<video id="jc_video" controls width="320" src="https://flowcdn.octaved.com/temp/incrediwear/jackson_corley.mp4"></video>
+				</div>
+			</div>
+		</div>
+		<div class="slide" id="slide6">
+			<img src="images/bg_6.jpg">
+		</div>
+		<div class="menu">
+			<button class="menu-button prev-button">&#8249;</button>
+			<button class="menu-button next-button">&#8250;</button>
+		</div>
+		<div class="sudden-start">
+			<button class="start-button">Start Here</button>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="script.js"></script>
+</body>
+</html>
