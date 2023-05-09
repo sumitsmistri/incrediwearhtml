@@ -33,7 +33,7 @@ $(document).ready(function() {
 		new Howl({src: ['audios/audio6.mp3']}),
 	];
 
-	//var audio5 = new Audio('audios/audio5.mp3');
+	var audio5 = new Audio('audios/audio5.mp3');
 
 	var video = $("#jc_video")[0];
 	var slideInterval;
@@ -139,21 +139,21 @@ $(document).ready(function() {
         // Pause all sounds when video plays
 		backgroundAudio.pause();
 		narrationAudios[currentSlide - 1].pause();	
-		/* if (!audio5.ended) {	
+		if (!audio5.ended) {	
 			audioLastPos = ( audio5.currentTime > 0 ) ? audio5.currentTime : narrationAudios[currentSlide - 1].seek();
 			audio5.pause();
-		} */
+		}
       };
 
       video.onpause = function() {		
         // Resume all sounds when video pauses
 		backgroundAudio.play();
-		/* if (!audio5.ended && currentSlide == 5) {
+		if (!audio5.ended && currentSlide == 5) {
 			audio5.currentTime = audioLastPos;
 			audio5.play();
-		} */
+		}
 		//narrationAudios[currentSlide - 1].seek(audioLastPos);
-		narrationAudios[currentSlide - 1].play();
+		
       };
   
 	// Toggle menu visibility and pause/resume audio on click of menu button
@@ -192,10 +192,6 @@ $(document).ready(function() {
 		$('.menu').show();
 	  }
 	  
-	  //audio5.pause();
-	  video.pause();
-	  video.currentTime = 0;
-	  $('#jc_thumb').show();
 
 	  //playNarrationAudio(slideNumber);
 	  setTimeout(function() {
@@ -236,7 +232,10 @@ $(document).ready(function() {
 		audio.pause();
 		audio.currentTime = 0;
 	  }); */
-	  	  
+	  
+	  audio5.pause();
+	  video.pause();
+	  
 	  for (var i = 0; i < narrationAudios.length; i++) {
         if (narrationAudios[i].playing()) {
           narrationAudios[i].stop();
